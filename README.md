@@ -11,3 +11,4 @@
     * have a button to increase the quantity
     * have a button to delete the item
     * STRETCH: have a button to update the item
+    * create category filter
