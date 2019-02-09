@@ -18,6 +18,11 @@ formNode.addEventListener('submit', function(event){
     };
 
     itemList.push(newItem);
-
-    console.log(itemList);
+    const listJSON = JSON.stringify(itemList);
+    window.localStorage.setItem('item-list', listJSON);
 });
+
+// console.log(itemList);
+
+
+// console.log(listJSON);

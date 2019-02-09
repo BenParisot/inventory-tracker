@@ -1,24 +1,19 @@
 const inventoryTableNode = document.getElementById('inventory');
 
-const newItem = {
-    name: 'apple',
-    description: 'a delicious fruit',
-    amount: 12
-};
+const itemListJSON = window.localStorage.getItem('item-list');
+const itemList = JSON.parse(itemListJSON);
 
-const itemList = [];
 
-const item = {
-    name: newItem.name,
-    description: newItem.description,
-    amount: newItem.amount
-};
 
-itemList.push(item);
-
-console.log(item);
 
 for(let index = 0; index < itemList.length; index++) {
+    const newItem = itemList[index];
+    const item = {
+        name: newItem.name,
+        description: newItem.description,
+        amount: newItem.amount
+    };
+    
     const row = document.createElement('tr');
     const nameCell = document.createElement('td');
     const descriptionCell = document.createElement('td');
