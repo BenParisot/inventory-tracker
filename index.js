@@ -3,9 +3,6 @@ const inventoryTableNode = document.getElementById('inventory');
 const itemListJSON = window.localStorage.getItem('item-list');
 const itemList = JSON.parse(itemListJSON);
 
-
-
-
 for(let index = 0; index < itemList.length; index++) {
     const newItem = itemList[index];
     const item = {
@@ -26,11 +23,5 @@ for(let index = 0; index < itemList.length; index++) {
     row.appendChild(nameCell);
     row.appendChild(descriptionCell);
     row.appendChild(amountCell);
-
-    console.log(row);
-
-
     inventoryTableNode.appendChild(row);
-
-
 }
